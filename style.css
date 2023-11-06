@@ -4,36 +4,38 @@ body{
 }
 
 .bitcoin-img{
+    position: relative;
     width: 50%;
     height: 30%;
     display: flex;
     justify-content: end;
-    margin-top: 10%;
+    margin-top: 18%;
 }
 .name{
  color: #d29e00;
  margin-left: 50%;
  margin-top: -20%;
- font-family:cursive;
  font-size: 300%;
 }
 .description{
     color: #d29e00;
     margin-left: 50%;
 }
-.il{
-    list-style-type:  none;
-}
 .ul{
     color: white;
     display: flex;
-    align-items: start;
     justify-content: end;
-    margin-top: -28%;
-    margin-right: 10%;
-    font-size: 200%;
+    margin-top: -35%;
+    margin-right: 20%;
+    flex-wrap: nowrap;
+    flex-direction: row;
     list-style: none;
-    
+    font-size: 150%;
+}
+.li{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 a:hover{
     color: gold;
@@ -43,4 +45,15 @@ a{
     text-decoration: none;
     list-style-type: none;
     margin-right: 20%;
+}
+.img{
+    display: flex;
+    width: 3%;
+    height: 3%;
+    margin-top: 53%;
+    margin-left: 2%;
+}
+.img-div{
+    display: flex;
+    flex-wrap: wrap;
 }
