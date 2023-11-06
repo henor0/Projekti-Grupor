@@ -1,0 +1,46 @@
+body{
+   background-color: black;
+   overflow: hidden;
+}
+
+.bitcoin-img{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: end;
+    margin-top: 10%;
+}
+.name{
+ color: #d29e00;
+ margin-left: 50%;
+ margin-top: -20%;
+ font-family:cursive;
+ font-size: 300%;
+}
+.description{
+    color: #d29e00;
+    margin-left: 50%;
+}
+.il{
+    list-style-type:  none;
+}
+.ul{
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    margin-top: -28%;
+    margin-right: 10%;
+    font-size: 200%;
+    list-style: none;
+    
+}
+a:hover{
+    color: gold;
+}
+a{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 20%;
+}
