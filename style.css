@@ -5,16 +5,17 @@ body{
 
 .bitcoin-img{
     position: relative;
-    width: 50%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
     display: flex;
     justify-content: end;
-    margin-top: 18%;
+    margin-top: 10%;
+    margin-left: 5%;
 }
 .name{
  color: #d29e00;
  margin-left: 50%;
- margin-top: -20%;
+ /* margin-top: -20%; */
  font-size: 300%;
 }
 .description{
@@ -25,7 +26,7 @@ body{
     color: white;
     display: flex;
     justify-content: end;
-    margin-top: -35%;
+    margin-top: -33%;
     margin-right: 20%;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -49,11 +50,25 @@ a{
 .img{
     display: flex;
     width: 3%;
-    height: 3%;
-    margin-top: 53%;
-    margin-left: 2%;
+    height: 100%;
+    background-color: #999;
 }
-.img-div{
+.img-ul{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 30%;
+    
+}
+.img-il{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+footer{
+    background-color: #999;
+    height: 100px;
+    width: 1800px;
+    margin-left: -2%;
 }
