@@ -333,8 +333,22 @@ h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .number{
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 40%;
     font-size: 150%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.txt-input{
+    position: absolute;
+    margin-top: 32%;
+    margin-left: 40%;
+    width: 20%;
+    height: 4%;
+    border-radius: 2%;
+    border-color: black;
+}
+.txt-p{
+    position: absolute;
+    margin-top: 28%;
+    margin-left: 40%;
 }
