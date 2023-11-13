@@ -101,7 +101,7 @@
             <option value="#">Cardano</option>
           </select>
 
-        <button class="enter-btn">Enter</button>
+        <button id="enter-btn">Enter</button>
         
         <p class="service-quick-transaction">Quick Explanation About <br> Online Transactions:</p>
         <a href="https://youtu.be/2ytjZCtnwWg" class="video">Video</a>
@@ -122,6 +122,7 @@
         <h1 class="contact-us"> Contact Us</h1>
         <h3 class="email">Email: Xchange@gmail.com</h3>
         <h3 class="number">Number: 044 123 456</h3>
+        <button id="send">Send</button>
     </section>
 
 </body>
@@ -149,4 +150,19 @@
 
       output.textContent = selectedText;
     });
+
+    var button = document.getElementById('enter-btn');
+
+button.addEventListener('click', function() {
+
+    alert('Your trade has been made');
+});
+
+var send = document.getElementById('send');
+
+send.addEventListener('click', function() {
+
+    alert('Your message has been sent');
+});
+
   </script>
