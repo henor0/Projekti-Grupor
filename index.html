@@ -40,6 +40,9 @@
             </ul>
         </header>
     </section>
+
+
+
     <section id="about">
         <img src="/img/trade.webp" alt="" class="trade-img">
         <h1 class="abt-us-name">About Us</h1>
@@ -56,9 +59,92 @@
 
         <p class="our-mission-description">At Xchange, our mission is simple: to empower you with <br>the tools and knowledge you <br>need to navigate the exciting <br>world of cryptocurrencies. We <br>believe that blockchain <br> technology and digital assets <br>are the future of finance.</p>
     </section>
-    <section id="services"></section>
-    <section id="contact"></section>
+        
+
+
+    <section id="services">
+        <img src="/img/services.png" alt="" class="service-img">
+        <h1 class="welcome">Welcome to Xchange</h1>
+        <h2 class="wwo">What we offer</h2>
+        <p class="service s1">Crytpocurrency Trading : With Xchange You Can Trade Your Crypto With Other Users And Also You Can Exhcange Your Crypto Into Real Life Money</p>
+        <p class="service s2">Quick Transactions : Transactions Happen Almost Immediately So You Can Get Your Money Or Crypto Fast</p>
+        <p class="service s3">Lowest fees on the market : With Xchange You Can Trade And Exchange Crypto While Having To Pay Little to No Fees</p>
+
+        <h2 class="selet-a-crypto">Select a cryptocurrency:</h2>
+        <input type="number" class="input1">
+        <select id="cryptoSelect">
+          <option value="#">Bitcoin</option>
+          <option value="#">Ethereum</option>
+          <option value="#">Binance Coin</option>
+          <option value="#">Doge Coin</option>
+          <option value="#">Shiba Inu</option>
+          <option value="#">XRP (Ripple)</option>
+          <option value="#">Apollo Crypto</option>
+          <option value="#">Tether</option>
+          <option value="#">Litecoin</option>
+          <option value="#">Cardano</option>
+        </select>
+
+
+        <h1 class="selet-a-crypto2">Turn into:</h1>
+        <input type="number" class="input2">
+        <select id="cryptoSelect2">
+            <option value="#">Bitcoin</option>
+            <option value="#">Ethereum</option>
+            <option value="#">Binance Coin</option>
+            <option value="#">Doge Coin</option>
+            <option value="#">Shiba Inu</option>
+            <option value="#">XRP (Ripple)</option>
+            <option value="#">Apollo Crypto</option>
+            <option value="#">Tether</option>
+            <option value="#">Litecoin</option>
+            <option value="#">Cardano</option>
+          </select>
+
+        <button class="enter-btn">Enter</button>
+        
+        <p class="service-quick-transaction">Quick Explanation About <br> Online Transactions:</p>
+        <a href="https://youtu.be/2ytjZCtnwWg" class="video">Video</a>
+
+        <p class="lowest-fees">For example: <br>
+            The Bitcoin average fee is 6.828 while at our platform the fee is 5.46. <br>
+            The Ethereum average fee is 0.0004 while at our platform the fee is 0.0003. <br>
+            The Shiba Inu average fee is $8.53 while at our platform the fee is $2.12.
+        </p>
+    </section>
+
+
+
+    <section id="contact">
+        <img src="/img/contactus.webp" alt="" class="contact-us-img">
+        <h1 class="contact-us"> Contact Us</h1>
+        <h3 class="email">Email: Xchange@gmail.com</h3>
+        <h3 class="number">Number: 044 123 456</h3>
+    </section>
 
 </body>
 
 </html>
+
+<script>
+    const cryptoSelect = document.getElementById('cryptoSelect');
+    const output = document.getElementById('output');
+  
+    cryptoSelect.addEventListener('change', function() {
+      const selectedValue = cryptoSelect.value;
+      const selectedText = cryptoSelect.options[cryptoSelect.selectedIndex].text;
+
+      output.textContent = selectedText;
+  
+    });
+
+    const cryptoSelect2 = document.getElementById('cryptoSelect2');
+    const output2 = document.getElementById('output');
+  
+    cryptoSelect2.addEventListener('change', function() {
+      const selectedValue = cryptoSelect2.value;
+      const selectedText = cryptoSelect2.options[cryptoSelect2.selectedIndex].text;
+
+      output.textContent = selectedText;
+    });
+  </script>
