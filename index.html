@@ -34,6 +34,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#convert">Convert</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </header>
@@ -64,11 +65,16 @@
         <img src="/img/services.png" alt="" class="service-img">
         <h1 class="welcome">Welcome to Xchange</h1>
         <h2 class="wwo">What we offer</h2>
-        <p class="service s1">Crytpocurrency Trading : With Xchange You Can Trade Your Crypto With Other Users And Also You Can Exhcange Your Crypto Into Real Life Money</p>
-        <p class="service s2">Quick Transactions : Transactions Happen Almost Immediately So You Can Get Your Money Or Crypto Fast</p>
-        <p class="service s3">Lowest fees on the market : With Xchange You Can Trade And Exchange Crypto While Having To Pay Little to No Fees</p>
+        <p class="service s1">Crytpocurrency Trading : With Xchange You Can Trade Your Crypto With Other Users And Also You Can Exhcange Your Crypto Into Real Life Money.
+            <br>
+        <br>Whats Crypto Trading?<br>
+        Crypto trading, short for cryptocurrency trading, involves buying, selling, or exchanging cryptocurrencies in the financial markets. Cryptocurrencies are digital or virtual currencies that use cryptography for security and operate on decentralized networks based on blockchain technology.
+        </p>
+        <p class="service s2">Quick Transactions : Transactions Happen Almost Immediately So You Can Get Your Money Or Crypto Fast <br><br>
+            Online transaction is a payment method in which the transfer of fund or money happens online over electronic fund transfer. Online transaction process (OLTP) is secure and password protected. Three steps involved in the online transaction are Registration, Placing an order, and, Payment.</p>
+        <p class="service s3">Lowest fees on the market : With Xchange You Can Trade And Exchange Crypto While Having To Pay The Lowest Fee </p>
 
-        <h2 class="selet-a-crypto">Select a cryptocurrency:</h2>
+        <!-- <h2 class="selet-a-crypto">Select a cryptocurrency:</h2>
         <input type="number" class="input1">
         <select id="cryptoSelect">
           <option value="#">Bitcoin</option>
@@ -99,16 +105,76 @@
             <option value="#">Cardano</option>
           </select>
 
-        <button id="enter-btn">Enter</button>
+        <button id="enter-btn">Enter</button> -->
         
-        <p class="service-quick-transaction">Quick Explanation About <br> Online Transactions:</p>
-        <a href="https://youtu.be/2ytjZCtnwWg" class="video">Video</a>
+        <!-- <p class="service-quick-transaction">Online transaction is a payment method in which the transfer of fund or money happens online over electronic fund transfer. Online transaction process (OLTP) is secure and password protected. Three steps involved in the online transaction are Registration, Placing an order, and, Payment.</p>
 
         <p class="lowest-fees">For example: <br>
             The Bitcoin average fee is 6.828 while at our platform the fee is 5.46. <br>
             The Ethereum average fee is 0.0004 while at our platform the fee is 0.0003. <br>
             The Shiba Inu average fee is $8.53 while at our platform the fee is $2.12.
-        </p>
+        </p> -->
+    </section>
+
+    <section id="convert">
+        <img src="/img/convert.avif" alt="" class="convert-img">
+        <div id="converter">
+            <h2>Currency Converter</h2>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount" />
+    
+            <label for="from">From:</label>
+            <select id="from">
+                <option value="EUR">Euro (EUR)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="CHF">Swiss Franc (CHF)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+            </select>
+    
+            <label for="to">To:</label>
+            <select id="to">
+                <option value="EUR">Euro (EUR)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="CHF">Swiss Franc (CHF)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+            </select>
+    
+            <button onclick="convert()">Convert</button>
+    
+            <div id="result"></div>
+        </div>
+
+        <div id="cryptoConverter">
+            <h2>Crypto to Fiat Converter</h2>
+            <label for="cryptoAmount">Amount:</label>
+            <input type="number" id="cryptoAmount" placeholder="Enter amount" />
+    
+            <label for="cryptoFrom">From:</label>
+            <select id="cryptoFrom">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="DOGE">Dogecoin (DOGE)</option>
+                <option value="BNB">Binance Coin (BNB)</option>
+                <option value="SHIB">Shiba Inu (SHIB)</option>
+                <option value="APL">Apollo (APL)</option>
+                <option value="LTC">Litecoin (LTC)</option>
+                <option value="ADA">Cardano (ADA)</option>
+                <option value="XRP">XRP (XRP)</option>
+            </select>
+    
+            <label for="cryptoTo">To:</label>
+                <select id="cryptoTo">
+                <option value="EUR">Euro (EUR)</option>
+                <option value="USD">US Dollar (USD)</option>
+            </select>
+    
+            <button onclick="convertCrypto()">Convert</button>
+    
+            <div id="cryptoResult"></div>
+        </div>
+    
+
+        
     </section>
 
 
@@ -124,15 +190,12 @@
         <h3 class="email">Email: Xchange@gmail.com</h3>
         <h3 class="number">Number: 044 123 456</h3>
         <button id="send">Send</button>
+
+        
         
     </section>
-
-</body>
-
-</html>
-
 <script>
-    const cryptoSelect = document.getElementById('cryptoSelect');
+            const cryptoSelect = document.getElementById('cryptoSelect');
     const output = document.getElementById('output');
   
     cryptoSelect.addEventListener('change', function() {
@@ -166,5 +229,55 @@ send.addEventListener('click', function() {
 
     alert('Your message has been sent');
 });
+function convert() {
+            var amount = parseFloat(document.getElementById('amount').value);
+            var fromCurrency = document.getElementById('from').value;
+            var toCurrency = document.getElementById('to').value;
 
-  </script>
+            
+            var rates = {
+                EUR: 1,
+                USD: 1.18, 
+                CHF: 1.08, 
+                JPY: 128.79 
+            };
+
+            var result = (amount * rates[toCurrency]) / rates[fromCurrency];
+
+            document.getElementById('result').innerHTML = amount + ' ' + fromCurrency + ' = ' + result.toFixed(2) + ' ' + toCurrency;
+        }
+
+        function convertCrypto() {
+    var cryptoAmount = parseFloat(document.getElementById('cryptoAmount').value);
+    var cryptoFromCurrency = document.getElementById('cryptoFrom').value;
+    var cryptoToCurrency = document.getElementById('cryptoTo').value;}
+
+    console.log("From Currency:", cryptoFromCurrency);
+    console.log("To Currency:", cryptoToCurrency);
+
+
+
+    function convertCrypto() {
+            var cryptoAmount = parseFloat(document.getElementById('cryptoAmount').value);
+            var cryptoFromCurrency = document.getElementById('cryptoFrom').value;
+            var cryptoToCurrency = document.getElementById('cryptoTo').value;
+
+
+            var cryptoRates = {
+            BTC: 32721,
+            ETH: 1829,
+            SHIB: 0.0000083,
+            DOGE: 0.067,
+            BNB: 224.83,
+            LTC: 65.39,
+            APL: 0.005,
+            XRP: 0.58,
+            ADA: 0.33,
+             
+            };
+
+            var cryptoResult = (cryptoAmount * cryptoRates[cryptoFromCurrency]);
+
+            document.getElementById('cryptoResult').innerHTML = cryptoAmount + ' ' + cryptoFromCurrency + ' = ' + cryptoResult.toFixed(2) + ' ' + cryptoToCurrency;
+        }
+        </script>
